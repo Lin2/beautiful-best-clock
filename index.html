@@ -4,11 +4,14 @@
   <title>Clean Clock</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body onload = "initClock()">
 <body>
+    <!--
   <div id="clock-face">0:00:01 AM</div> 
   <div class="btn-container">  
     <button class="btn">Meow!</button>
   </div>
+  -->
   <div class = "datetime">
     <div class = "date">
       <span id = "dayname">Day</span>,
@@ -17,11 +20,36 @@
       <span id = "year">Year</span>
     </div>
     <div class = "time">
-      <span id = "hour">00</span>:
-      <span id = "minute">00</span>:
-      <span id = "second">00</span>
-      <span id = "period">AM</span>
+        <span id = "hour">00</span>:
+        <span id = "minute">00</span>:
+        <span id = "second">00</span>
+        <span id = "period">AM</span>
     </div>
-   </div>
+</div>
+<script type = "text/javascript">
+function updateClock(){
+    var now = new Date();
+    var dname = now.getDay(),
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear(),
+    hou = now.getHours(),
+    min = now.getMinutes(),
+    sec = now.getSeconds(),
+    pe = "AM";
+
+    var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    var ids = ["dayname", "month", "daynum", "year", "hour", "minute", "second","period"];
+    var values = [week[dname], [mo, dnum, yr, hou, min, sec, pe];
+    for(var i = 0; i<ids.length; i++)
+    document.getElementById(ids[i]).firstChild.nodeValue - values[i];
+}
+function initClock(){
+    updateClock();
+    window.setInterval("updateClock()",1);
+    
+}
+</script>
 </body>
 </html>
