@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset = "utf-8">
   <title>Clean Clock</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body onload = "initClock()">
-<body>
     <!--
   <div id="clock-face">0:00:01 AM</div> 
   <div class="btn-container">  
@@ -37,18 +37,27 @@ function updateClock(){
     min = now.getMinutes(),
     sec = now.getSeconds(),
     pe = "AM";
-
+    if(hou == 0){
+        hou =12;
+    }
+    if(hou > 12){
+        hou = hou-12;
+        pe = "PM";
+    }
+    Number.prototype.pad = function(digits){
+        for(var n = this.toString(); n.length<digits; n = 0+n);
+        return n;
+    }
     var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
     var ids = ["dayname", "month", "daynum", "year", "hour", "minute", "second","period"];
-    var values = [week[dname], [mo, dnum, yr, hou, min, sec, pe];
+    var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
     for(var i = 0; i<ids.length; i++)
-    document.getElementById(ids[i]).firstChild.nodeValue - values[i];
+    document.getElementById(ids[i]).firstChild.nodeValue = values[i];
 }
 function initClock(){
     updateClock();
     window.setInterval("updateClock()",1);
-    
 }
 </script>
 </body>
