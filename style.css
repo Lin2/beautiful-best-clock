@@ -17,7 +17,13 @@ body{
     border: 3px solid #f09e9e;
     border-radius: 5px;
     width: 340px;
-    -webkit-box-reflect: below 1 px linear-gradient(transparent,rgba(255,255,255,0.1)); 
+    -webkit-box-reflect: below 1 px linear-gradient(transparent,rgba(255,255,255,0.4)); 
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+.datetime:hover{
+    background: #f09e9e;
+    box-shadow: 0 0 30px #f09e9e;
 }
 .date{
     font-size: 20px;
@@ -39,7 +45,7 @@ body{
     letter-spacing: 3px;
 }
 .time span:last-child{
-    background: #f0553a;
+    background: #f09e9e;
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
