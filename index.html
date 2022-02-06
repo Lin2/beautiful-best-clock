@@ -2,12 +2,15 @@
 <html>
 <head>
   <title>Clean Clock</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <script src="script.js"></script>
 </head>
 <body>
+  <canvas id="audio_visual" height="500" ></canvas>
   <div id="clock-face">0:00:01 AM</div> 
   <div class="btn-container">
-    <button class="btn">Meow!</button>
+    <button class="btn" onclick="playAudio()">Meow!</button>
   </div>
+</div>
 </body>
 </html>
