@@ -18,6 +18,7 @@ body{
     border: 3px solid #f09e9e;
     border-radius: 5px;
     width: 340px;
+    -webkit-box-reflect: below 1 px linear-gradient(transparent,rgba(255,255,255,0.1)); 
 }
 .date{
     font-size: 20px;
@@ -26,7 +27,7 @@ body{
     letter-spacing: 3px;
 }
 .time{
-    font-size: 6o px;
+    font-size: 60 px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,3 +39,13 @@ body{
     text-align: center;
     letter-spacing: 3px;
 }
+.time span:last-child{
+    background: #f0553a;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10 px;
+    padding: 0 5px;
+    border-radius: 3 px;
+}
+ 
