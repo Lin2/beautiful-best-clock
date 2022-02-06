@@ -7,37 +7,33 @@
 </head>
 
 
-<body onload = "initClock()">
-    <!--
-  <div id="clock-face">0:00:01 AM</div> 
-  <div class="btn-container">  
-    <button class="btn">Meow!</button>
+<body>
+  <div class="catdate" onclick="playAudio()">
+    <div class = "datetime">
+      <div class = "date">
+        <span id = "dayname">Day</span>,
+        <span id = "month">Month</span>
+        <span id = "daynum">00</span>,
+        <span id = "year">Year</span>
+      </div>
+      <div class = "time">
+          <span id = "hour">00</span>:
+          <span id = "minute">00</span>:
+          <span id = "second">00</span>
+          <span id = "period">AM</span>
+      </div>
   </div>
-  -->
-  <div class = "datetime">
-    <div class = "date">
-      <span id = "dayname">Day</span>,
-      <span id = "month">Month</span>
-      <span id = "daynum">00</span>,
-      <span id = "year">Year</span>
+  <div class = "cat">
+    <div class = "face">
+      <div class = "ear-l"></div>   
+      <div class = "ear-r"></div>
+      <div class = "eye-l"></div>
+      <div class = "eye-r"></div>
+      <div class = "eyeball-l"></div>
+      <div class = "eyeball-r"></div>
+      <div class = "mouth"></div>
     </div>
-    <div class = "time">
-        <span id = "hour">00</span>:
-        <span id = "minute">00</span>:
-        <span id = "second">00</span>
-        <span id = "period">AM</span>
-    </div>
-</div>
-<div class = "cat">
-  <div class = "face">
-    <div class = "ear-l"></div>   
-    <div class = "ear-r"></div>
-    <div class = "eye-l"></div>
-    <div class = "eye-r"></div>
-    <div class = "eyeball-l"></div>
-    <div class = "eyeball-r"></div>
-    <div class = "mouth"></div>
-   </div>
+  </div>
 </div>
 <script type = "text/javascript">
 function updateClock(){
@@ -75,10 +71,9 @@ function initClock(){
 </script>
 <script src="script.js"></script>
 
-<canvas id="audio_visual" height="500" ></canvas>
-
-<div class="btn-container">
-  <button class="btn" onclick="playAudio()">Meow!</button>
+<div id="audiovisual">
+  <canvas id="audio_visual" height="400"></canvas>
 </div>
+
 </body>
 </html>

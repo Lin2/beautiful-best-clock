@@ -1,4 +1,5 @@
 window.onload = function() {
+    initClock();
     var audioElement = new Audio();
     audioElement.src = 'ANMLCat_Cat purring 3 (ID 1010)_BSB.wav';
     audioElement.controls = true;
@@ -37,7 +38,7 @@ window.onload = function() {
         for (let i = 1; i < data.length; i++) {
             let x = i%2 == 0 ? space*(data.length/2 + Math.floor(i/2)): space*(data.length/2 - Math.floor(i/2));
             ctx.beginPath();
-            ctx.moveTo(x,canvas.height);
+            ctx.moveTo(x,canvas.height + 200);
             ctx.lineTo(x,canvas.height-(data[i]*1.5));
             ctx.lineWidth = 10;
             ctx.stroke();

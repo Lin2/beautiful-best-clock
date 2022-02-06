@@ -4,10 +4,18 @@
 }
 body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
     background: #f0553a;
+}
+.catdate{
+  display:flex;
+  align-items: center;
+  height:50%;
+  justify-content: center;
+}
+#audiovisual{
+  display:fixed;
+  bottom:0;
+  margin-top: 10px;
 }
 .datetime{
     color: #fff;
