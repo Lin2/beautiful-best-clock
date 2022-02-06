@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     height: 100vh;
     display: flex;
@@ -27,7 +26,7 @@ body{
     letter-spacing: 3px;
 }
 .time{
-    font-size: 60 px;
+    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
